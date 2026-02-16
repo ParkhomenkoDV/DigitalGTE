@@ -13,11 +13,11 @@ vendor:
 
 test:
 	@echo "$(BLUE)Running tests...$(RESET)"
-	go test ./...
+	go test ./... -cover
 
 bench:
 	@echo "$(BLUE)Running benchmarks...$(RESET)"
-	go test -bench=. -benchmem -benchtime=5s -count=5
+	go test -bench=. -benchmem -benchtime=5s -count=3
 
 prof:
 	@echo "$(BLUE)Running profiling...$(RESET)"
